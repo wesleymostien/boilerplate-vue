@@ -1,0 +1,141 @@
+@use '../abstract' as *;
+@use '../base/typography' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.card-crypto {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+
+	.card {
+		&__content {
+			align-items: flex-start;
+			display: flex;
+			justify-content: space-between;
+			padding: 1rem;
+		}
+
+		&__extra {
+			background-color: rgba($color-black, 0.06);
+			display: flex;
+			justify-content: space-between;
+			padding: 1rem;
+
+			> div {
+				border-left: thin solid $color-grey6;
+				display: flex;
+				flex: 0 0 25%;
+				flex-direction: column;
+				padding: 0 1rem;
+
+				&:first-child {
+					border-left: none;
+				}
+			}
+
+			.amount {
+				@include font-bold;
+				white-space: nowrap;
+
+				&.--small {
+					@include text-caption;
+				}
+			}
+
+			.supply {
+				.percentage {
+					align-items: flex-end;
+					display: flex;
+					flex-direction: column;
+					margin-top: 0.5rem;
+				}
+
+				&__rows {
+					margin-top: 1rem;
+				}
+
+				&__row {
+					align-items: center;
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+		}
+
+		&__header {
+			align-items: center;
+			background-color: $color-primary;
+			color: $color-white;
+			display: flex;
+			justify-content: space-between;
+			padding: 0.5rem;
+			padding-right: 1rem;
+
+			.chip {
+				background-color: rgba($color-white, 0.12);
+				color: $color-white;
+
+				&--last-update {
+					background-color: transparent;
+					opacity: 0.5;
+				}
+
+				&.--updated {
+					border: thin solid currentColor;
+					color: $color-state-success;
+					opacity: 1;
+				}
+			}
+
+			.rank {
+				@include text-caption;
+			}
+		}
+
+		&__icon {
+			margin-right: 1rem;
+		}
+
+		&__price {
+			@include font-bold;
+			@include text-h3;
+			line-height: 3rem;
+
+			&-change {
+				align-items: center;
+				display: flex;
+
+				.label {
+					margin-right: 0.5rem;
+				}
+			}
+		}
+
+		&__title {
+			@include font-bold;
+			@include text-h3;
+			line-height: 3rem;
+			white-space: nowrap;
+		}
+	}
+
+	.content {
+		&__left {
+			align-items: center;
+			display: flex;
+		}
+
+		&__right {
+			align-items: flex-end;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.label {
+		@include font-light;
+		@include text-subtitle;
+		color: $color-grey3;
+	}
+}

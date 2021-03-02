@@ -1,0 +1,15 @@
+.v-icon {
+	color: currentColor;
+}
+
+.v-toolbar {
+	&__content {
+		> * {
+			margin-right: 1rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

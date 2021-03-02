@@ -1,0 +1,8 @@
+@use '../abstract' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.#{$app}-bar {
+	@include gradient-background($gradient-vue);
+	color: $color-white;
+}

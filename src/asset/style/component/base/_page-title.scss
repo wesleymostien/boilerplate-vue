@@ -1,0 +1,25 @@
+@use '../../abstract' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.page-title {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+
+	&__left {
+		align-items: center;
+		display: flex;
+	}
+
+	&__text {
+		margin-right: 0.5rem;
+	}
+
+	.toolbar {
+		background-color: transparent;
+		border-radius: $border-radius;
+		box-shadow: none;
+		flex-grow: 0;
+	}
+}

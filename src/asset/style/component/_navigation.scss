@@ -1,0 +1,20 @@
+@use '../base/typography' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.navigation {
+	&__item {
+		margin-bottom: 0.5rem;
+
+		.item {
+			&__icon {
+				margin-right: 1.5rem;
+			}
+
+			&__title {
+				@include text-body;
+				line-height: unset;
+			}
+		}
+	}
+}

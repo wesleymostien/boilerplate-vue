@@ -1,0 +1,31 @@
+/* ---------------------------------------------------------------------------------------------- */
+/* Font */
+
+$font-family: 'Inter';
+$font-path: '~@/asset/font';
+$font-styles: (
+	'Thin': 'Thin',
+	'Regular': 'Regular',
+	'Medium': 'Medium',
+	'Bold': 'Bold',
+);
+
+/* ---------------------------------------------------------------------------------------------- */
+
+$border-radius: 4px;
+$transition-border-hide: border-width 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+$transition-border-show: border-width 0.2s cubic-bezier(0.32, 0, 0.67, 0);
+$transition-cubic-bezier: cubic-bezier(0.25, 0.8, 0.5, 1);
+$transition-ease-out: cubic-bezier(0.26, 0.99, 0.66, 0.95);
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Selectors */
+
+$ns: 'boilerplate';
+
+$app: 'app';
+$card: 'card';
+$container: 'container';
+$page: 'page';
+$tooltip: 'tooltip';
+$tour: 'tour';

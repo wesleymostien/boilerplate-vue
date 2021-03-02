@@ -1,0 +1,5 @@
+{
+	"*": ["prettier --write", "npm run i18n"],
+	"*.{css,scss,vue}": ["stylelint --fix"],
+	"*.{js,vue}": ["eslint  --fix"]
+}

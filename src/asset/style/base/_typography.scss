@@ -1,0 +1,66 @@
+@use '../abstract' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+
+@each $id, $font-style in $font-styles {
+	@include font-face(
+		'#{$font-family}-#{$font-style}',
+		'#{$font-path}/#{$font-family}-#{$font-style}'
+	);
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* FONT VARIANTS */
+
+@mixin font-thin {
+	font-family: '#{$font-family}-Thin', sans-serif;
+}
+
+@mixin font-light {
+	font-family: '#{$font-family}-Light', sans-serif;
+}
+
+@mixin font-regular {
+	font-family: '#{$font-family}-Regular', sans-serif;
+}
+
+@mixin font-medium {
+	font-family: '#{$font-family}-Medium', sans-serif;
+}
+
+@mixin font-bold {
+	font-family: '#{$font-family}-Bold', sans-serif;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/* FONT SIZES */
+
+@mixin text-h2 {
+	font-size: 3rem;
+}
+
+@mixin text-h3 {
+	font-size: 2.125rem;
+	line-height: 4.125rem;
+}
+
+@mixin text-body {
+	font-size: 1rem;
+}
+
+@mixin text-subtitle {
+	font-size: 0.9rem;
+	letter-spacing: 0.025rem;
+}
+
+@mixin text-caption {
+	font-size: 0.8rem;
+	letter-spacing: 0.025rem;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+h3 {
+	@include font-thin;
+	@include text-h3;
+}

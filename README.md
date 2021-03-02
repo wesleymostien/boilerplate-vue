@@ -31,7 +31,10 @@
 <br>
 
 -   Clone and checkout Git repository:<br>
-    `git clone https://github.com/wesleymostien/boilerplate-vue.git`
+    `git clone git@bitbucket.org:axxesit/signify-maxos-fusion.git`
+
+-   Browse to **frontend** folder:<br>
+    `cd frontend`
 
 -   To install all needed dependencies:<br>
     `npm install`
@@ -62,7 +65,7 @@ These scripts can be executed in the terminal: `npm run ...`
 | `lint:js:fix`   | run `lint:js` script and try to fix as many JavaScript related linting issues as possible       |
 | `prettier`      | format all files with Prettier                                                                  |
 | `prettier:i18n` | format i18n locale files with Prettier                                                          |
-| `webpack`       | check output of Webpack (without starting a dev server)                                         |
+| `webpack`       | check output of Webpack (without starting a dev server) outputs                                 |
 
 <br>
 
@@ -173,6 +176,9 @@ These scripts can be executed in the terminal: `npm run ...`
 | [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)                                 | Webpack [plugin](https://webpack.js.org/plugins/html-webpack-plugin/) that simplifies creation of HTML files to serve bundles.                                                                                                                                                                                              |
 | [husky](https://www.npmjs.com/package/husky)                                                             | Husky uses Git hooks to execute scripts on `git commit`, `git push`, ... (&rarr; **file [.huskyrc.json](#Project-structure)**, to use in combination with **lint-staged**). <br> <br> If Git hooks are not running on OSX, try running this command: `` sudo launchctl config user path `echo $PATH `` and restart machine. |
 | [image-webpack-loader](https://www.npmjs.com/package/image-webpack-loader)                               | Webpack loader for minifying images (**.gif**, **.jpg**, **.jpeg**, **.png**, **.svg**, **.webp**) with [imagemin](https://www.npmjs.com/package/imagemin).                                                                                                                                                                 |
+| [jspdf](https://www.npmjs.com/package/jspdf)                                                             | Library that enables client-side JavaScript PDF generation.                                                                                                                                                                                                                                                                 |
+| [jspdf-autotable](https://www.npmjs.com/package/jspdf-autotable)                                         | Plugin for jsPDF which adds the ability to generate PDF tables either by parsing HTML tables or by using Javascript data directly.                                                                                                                                                                                          |
+| [konva](https://www.npmjs.com/package/konva)                                                             | HTML5 Canvas JavaScript framework that extends the 2d context by enabling canvas interactivity for desktop and mobile applications.                                                                                                                                                                                         |
 | [lint-staged](https://www.npmjs.com/package/lint-staged)                                                 | Run linters against staged git files (&rarr; **file [.lintstagedrc.json](#Project-structure)**, to use in combination with **husky**).                                                                                                                                                                                      |
 | [mini-css-extract-plugin](https://www.npmjs.com/package/mini-css-extract-plugin)                         | Webpack [plugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) that extracts CSS into separate files.                                                                                                                                                                                                            |  |
 | [optimize-css-assets-webpack-plugin](https://www.npmjs.com/package/optimize-css-assets-webpack-plugin)   | Webpack plugin to optimize and minimize CSS assets (by default it uses [cssnano](https://www.npmjs.com/package/cssnano) but a custom CSS processor can be specified).                                                                                                                                                       |
@@ -190,10 +196,13 @@ These scripts can be executed in the terminal: `npm run ...`
 | [terser-webpack-plugin](https://www.npmjs.com/package/terser-webpack-plugin)                             | Webpack [plugin](https://webpack.js.org/plugins/terser-webpack-plugin/) to minify JavaScript using [terser](https://www.npmjs.com/package/terser).                                                                                                                                                                          |
 | [url-loader](https://www.npmjs.com/package/url-loader)                                                   | Webpack [loader](https://webpack.js.org/loaders/url-loader/) that transforms files (images) into base64 URIs.                                                                                                                                                                                                               |
 | [vue](https://www.npmjs.com/package/vue)                                                                 | Reactive, component-oriented view layer and JavaScript framework for modern web interfaces.                                                                                                                                                                                                                                 |
+| [vue-cookies](https://www.npmjs.com/package/vue-cookies)                                                 | A simple Vue.js plugin for handling browser cookies                                                                                                                                                                                                                                                                         |
 | [vue-i18n](https://www.npmjs.com/package/vue-i18n)                                                       | Reactive, component-oriented view layer and JavaScript framework for modern web interfaces.                                                                                                                                                                                                                                 |
 | [vue-loader](https://www.npmjs.com/package/vue-loader)                                                   | Vue I18n is internationalization plugin of Vue.js. It easily integrates some localization features to your Vue.js application.                                                                                                                                                                                              |
 | [vue-router](https://www.npmjs.com/package/vue-router)                                                   | Official router for Vue.js.                                                                                                                                                                                                                                                                                                 |
+| [vue-splide](https://www.npmjs.com/package/@splidejs/vue-splide)                                         | Lightweight, powerful and flexible slider and carousel.                                                                                                                                                                                                                                                                     |
 | [vue-template-compiler](https://www.npmjs.com/package/vue-template-compiler)                             | This package can be used to pre-compile Vue 2.0 templates into render functions to avoid runtime-compilation overhead and CSP (Content Security Policy) restrictions. (Used by **vue-loader**.)                                                                                                                             |
+| [vue-tippy](https://www.npmjs.com/package/vue-tippy)                                                     | VueJS tooltip plugin powered by [Tippy.js](https://atomiks.github.io/tippyjs/).                                                                                                                                                                                                                                             |
 | [vuetify](https://www.npmjs.com/package/vuetify)                                                         | A Vue UI Library with beautifully handcrafted Material Components.                                                                                                                                                                                                                                                          |
 | [vuetify-loader](https://www.npmjs.com/package/vuetify-loader)                                           | Webpack loader that will automatically import all Vuetify components as you use them.                                                                                                                                                                                                                                       |
 | [vuex](https://www.npmjs.com/package/vuex)                                                               | Centralized State Management for Vue.js.                                                                                                                                                                                                                                                                                    |
@@ -228,8 +237,10 @@ These scripts can be executed in the terminal: `npm run ...`
     -   [**`plugin/`**](./src/plugin) : Vue plugins (i18n, router, vuetify, vuex, ...)
     -   [**`script/`**](./src/script) : script files used in frontend
     -   [**`store/`**](./src/store) : holds the Vuex store
+    -   [main.js](./src/main.js) : starting point for Vue app and entry point for Webpack
 -   [.babelrc](./.babelrc) : config file for Babel transpiler
 -   [.browserslistrc](./.browserslistrc) : contains a list of the browsers that need to be supported (used for Babel, PostCSS, Autoprefixer, ...). Online tester: [https://browserl.ist/](https://browserl.ist/)
+-   [.dockerignore](./.dockerignore) : exclude files and directories from Docker, to increase the build’s performance
 -   [.eslintcache](./.eslintcache) : cache file for ESLint, so it only lints changed files to improve running time
 -   [.eslintignore](./.eslintignore) : exclude files from the ESLint linting process
 -   [.eslintrc.json](./.eslintrc.json) : settings file for ESLint (JavaScript linter)
@@ -239,6 +250,7 @@ These scripts can be executed in the terminal: `npm run ...`
 -   [.prettierrc.json](./.prettierrc.json) : settings file for Prettier (code formatter)
 -   [.stylelintignore](./.stylelintignore) : exclude files from the Stylelint linting process
 -   [.stylelintrc.json](./.stylelintrc.json) : settings file for Stylelint (Sass / SCSS / CSS linter)
+-   [Dockerfile](./Dockerfile) : contains all the commands to assemble a Docker image
 -   [jsconfig.json](./jsconfig.json) : specifies the root files and the options for the features provided by the JavaScript language service (compiler options, module resolving, ...)
 -   [package-lock.json](./package-lock.json) : automatically generated for any operations where npm modifies either the node_modules tree, or package.json file
 -   [package.json](./package.json) : holds data related to the project (dependencies, scripts, version, ...)

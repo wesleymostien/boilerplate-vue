@@ -1,0 +1,14 @@
+@use '../abstract' as *;
+@use '../base/typography' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.#{$app} {
+	@include font-regular;
+	background-color: rgba($color-background, 0.12);
+
+	&__content {
+		padding-bottom: 3rem;
+		padding-top: 2rem;
+	}
+}

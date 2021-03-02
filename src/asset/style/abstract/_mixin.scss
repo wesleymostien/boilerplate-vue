@@ -1,0 +1,15 @@
+// Make font-face available.
+@mixin font-face($font-family-variant, $font-file) {
+	@font-face {
+		font-family: $font-family-variant;
+		src: local(''), url($font-file + '.woff2') format('woff2'),
+			url($font-file + '.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+// Create background gradient.
+@mixin gradient-background($gradient) {
+	background-image: $gradient;
+}

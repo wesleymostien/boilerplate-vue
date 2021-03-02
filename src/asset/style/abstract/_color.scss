@@ -1,0 +1,41 @@
+@use 'function' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+
+$color-vue-blue: #35495e;
+$color-vue-green: #42b883;
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Theme */
+
+$color-accent: $color-vue-green;
+$color-background: #b3c8e6;
+$color-primary: $color-vue-blue;
+
+/* ---------------------------------------------------------------------------------------------- */
+/* State */
+
+$color-state-error: #ea3943;
+$color-state-info: #0089c4;
+$color-state-success: #16c784;
+$color-state-warning: #e98300;
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Neutral */
+
+$color-black: #000000;
+$color-grey1: #252525;
+$color-grey2: #5d5d5d;
+$color-grey3: #888888;
+$color-grey4: #b9b9b9;
+$color-grey5: #cccccc;
+$color-grey6: #e0e0e0;
+$color-grey7: #efefef;
+$color-white: #ffffff;
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Gradient */
+
+$gradient-midpoint-custom: 65;
+
+$gradient-vue: gradient(($color-vue-blue, $color-vue-green));

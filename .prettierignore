@@ -1,0 +1,19 @@
+# Ignore all
+*
+# Unignore all with extensions
+# !*.*
+# Unignore all dirs
+!*/
+
+dist
+node_modules
+public
+
+!*.css
+!*.html
+!*.js
+!*.json
+!*.md
+!*.scss
+!*.ts
+!*.vue

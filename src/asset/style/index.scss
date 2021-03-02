@@ -1,0 +1,15 @@
+@use 'abstract' as *;
+@use 'export';
+@use 'reset';
+
+@use "sass:meta";
+
+/* ---------------------------------------------------------------------------------------------- */
+
+##{$ns} {
+	@include meta.load-css('base');
+	@include meta.load-css('component');
+	@include meta.load-css('layout');
+	@include meta.load-css('page');
+	@include meta.load-css('vendor');
+}

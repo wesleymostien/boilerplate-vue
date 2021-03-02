@@ -1,0 +1,23 @@
+@use 'abstract' as *;
+
+/* ---------------------------------------------------------------------------------------------- */
+/* Export variables (to use in JavaScript) */
+
+:export {
+	colorAccent: $color-accent;
+	colorGrey1: $color-grey1;
+	colorGrey2: $color-grey2;
+	colorGrey3: $color-grey3;
+	colorGrey4: $color-grey4;
+	colorGrey5: $color-grey5;
+	colorGrey6: $color-grey6;
+	colorGrey7: $color-grey7;
+	colorPrimary: $color-primary;
+	colorStateError: $color-state-error;
+	colorStateInfo: $color-state-info;
+	colorStateSuccess: $color-state-success;
+	colorStateWarning: $color-state-warning;
+	colorWhite: $color-white;
+	namespace: #{$ns};
+	selectorApp: #{$app};
+}

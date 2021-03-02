@@ -1,0 +1,59 @@
+// Create a linear gradient.
+@function gradient($colors, $midpoints: null, $stops: null) {
+	$gradient-degree: 125;
+
+	@if length($colors) < 2 {
+		@error '$colors expects at least 2 values!';
+	}
+
+	$default_midpoint: 0.5;
+	$default_stop: 100 / (length($colors) - 1);
+	$linear-gradient: #{$gradient-degree}deg;
+
+	// no stops are passed
+	@if $stops == null {
+		$stops: (0);
+
+		@for $i from 1 through length($colors) - 1 {
+			$stops: append($stops, $default_stop * $i);
+		}
+	}
+	// not enough stops are passed
+	@else if length($stops) < length($colors) {
+		@for $i from length($stops) through length($colors) - 1 {
+			$stops: append($stops, $default_stop * $i);
+		}
+	}
+
+	// no midpoints are passed
+	@if $midpoints == null {
+		$midpoints: (0);
+
+		@for $i from length($colors) - 1 through 1 {
+			$midpoints: join(
+				(nth($stops, $i + 1) - nth($stops, $i)) * $default_midpoint + nth($stops, $i),
+				$midpoints
+			);
+		}
+	}
+	// not enough midpoints are passed
+	@else if length($midpoints) + 1 < length($colors) {
+		@for $i from length($midpoints) + 1 through length($colors) - 1 {
+			$midpoints: append(
+				$midpoints,
+				(nth($stops, $i + 1) - nth($stops, $i)) * $default_midpoint + nth($stops, $i)
+			);
+		}
+	}
+
+	// build string for linear-gradient
+	@for $i from 1 through length($colors) {
+		$linear-gradient: $linear-gradient + ', ' + nth($colors, $i) + ' ' + nth($stops, $i) + '%';
+
+		@if $i < length($colors) {
+			$linear-gradient: $linear-gradient + ', ' + nth($midpoints, $i) + '%';
+		}
+	}
+
+	@return #{'linear-gradient('} + $linear-gradient + #{')'};
+}
