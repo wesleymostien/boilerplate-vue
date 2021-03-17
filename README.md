@@ -31,7 +31,7 @@
 <br>
 
 -   Clone and checkout Git repository:<br>
-    `git clone git@bitbucket.org:axxesit/signify-maxos-fusion.git`
+    `git clone git@bitbucket.org:wesleymostien/boilerplate-vue.git`
 
 -   Browse to **frontend** folder:<br>
     `cd frontend`
