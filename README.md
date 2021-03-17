@@ -1,4 +1,4 @@
-# Vue Boilerplate
+# Boilerplate Vue
 
 -   [Setup](#setup)
 -   [Scripts](#scripts)
