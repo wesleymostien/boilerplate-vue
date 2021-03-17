@@ -1,4 +1,4 @@
-# Axxes / Signify Maxos Fusion / Frontend
+# Vue Boilerplate
 
 -   [Setup](#setup)
 -   [Scripts](#scripts)
