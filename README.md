@@ -237,7 +237,6 @@ These scripts can be executed in the terminal: `npm run ...`
     -   [main.js](./src/main.js) : starting point for Vue app and entry point for Webpack
 -   [.babelrc](./.babelrc) : config file for Babel transpiler
 -   [.browserslistrc](./.browserslistrc) : contains a list of the browsers that need to be supported (used for Babel, PostCSS, Autoprefixer, ...). Online tester: [https://browserl.ist/](https://browserl.ist/)
--   [.dockerignore](./.dockerignore) : exclude files and directories from Docker, to increase the build’s performance
 -   [.eslintcache](./.eslintcache) : cache file for ESLint, so it only lints changed files to improve running time
 -   [.eslintignore](./.eslintignore) : exclude files from the ESLint linting process
 -   [.eslintrc.json](./.eslintrc.json) : settings file for ESLint (JavaScript linter)
@@ -247,7 +246,6 @@ These scripts can be executed in the terminal: `npm run ...`
 -   [.prettierrc.json](./.prettierrc.json) : settings file for Prettier (code formatter)
 -   [.stylelintignore](./.stylelintignore) : exclude files from the Stylelint linting process
 -   [.stylelintrc.json](./.stylelintrc.json) : settings file for Stylelint (Sass / SCSS / CSS linter)
--   [Dockerfile](./Dockerfile) : contains all the commands to assemble a Docker image
 -   [jsconfig.json](./jsconfig.json) : specifies the root files and the options for the features provided by the JavaScript language service (compiler options, module resolving, ...)
 -   [package-lock.json](./package-lock.json) : automatically generated for any operations where npm modifies either the node_modules tree, or package.json file
 -   [package.json](./package.json) : holds data related to the project (dependencies, scripts, version, ...)
