@@ -33,9 +33,6 @@
 -   Clone and checkout Git repository:<br>
     `git clone https://github.com/wesleymostien/boilerplate-vue`
 
--   Browse to **frontend** folder:<br>
-    `cd frontend`
-
 -   To install all needed dependencies:<br>
     `npm install`
 
