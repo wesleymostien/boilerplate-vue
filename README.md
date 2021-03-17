@@ -31,7 +31,7 @@
 <br>
 
 -   Clone and checkout Git repository:<br>
-    `git clone git@bitbucket.org:wesleymostien/boilerplate-vue.git`
+    `git clone https://github.com/wesleymostien/boilerplate-vue`
 
 -   Browse to **frontend** folder:<br>
     `cd frontend`
